@@ -20,10 +20,13 @@
             branch_main.innerHTML = "QR Code Link Data"
             var branch_sub = document.getElementById("branch-demo-sub")
             var data_parsed = data["data_parsed"]
-            var campaign = "<p><b>~campaign:</b>" + data_parsed["~campaign"] + "</p><br>"
-            var channel = "<p><b>~channel:</b>" + data_parsed["~channel"] + "</p><br>"
-            var referring_link = "<p><b>~referring_link:</b>" + data_parsed["~referring_link"] + "</p><br>"
-            var clicked_branch_link = "<p><b>clicked_branch_link:</b>" + data_parsed["+clicked_branch_link"] + "</p><br>"
+            var campaign = "<p><b>~campaign:</b> " + data_parsed["~campaign"] + "</p>"
+            var channel = "<p><b>~channel:</b> " + data_parsed["~channel"] + "</p>"
+            var referring_link = "<p><b>~referring_link:</b> " + data_parsed["~referring_link"] + "</p>"
+            var clicked_branch_link = "<p><b>clicked_branch_link:</b> " + data_parsed["+clicked_branch_link"] + "</p>"
+            var custom_data = "<p><b>Custom Data</b></p>"
+            var product_name = "<p><b>product_name:</b> " + data_parsed["product_name"] + "</p>"
+            var product_pricing = "<p><b>product_pricing:</b> " + data_parsed["product_name"] + "</p>"
             branch_sub.innerHTML = campaign + channel + referring_link + clicked_branch_link
         });
     </script>
