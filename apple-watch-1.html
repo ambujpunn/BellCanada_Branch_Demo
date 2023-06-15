@@ -20,11 +20,11 @@
             branch_main.innerHTML = "QR Code Link Data"
             var branch_sub = document.getElementById("branch-demo-sub")
             var data_parsed = data["data_parsed"]
-            var campaign = "<b>~campaign:</b" + data_parsed["~campaign"]
-            var channel = "<b>~channel:</b>" + data_parsed["~channel"]
-            var referring_link = "<b>~referring_link:</b>" + data_parsed["~referring_link"]
-            var clicked_branch_link = "<b>clicked_branch_link:</b>" + data_parsed["+clicked_branch_link"]
-            branch_sub.innerHTML = campaign + "\n" + channel + "\n" + referring_link + "\n" + clicked_branch_link
+            var campaign = "<b>~campaign:</b" + data_parsed["~campaign"] + "<br>"
+            var channel = "<b>~channel:</b>" + data_parsed["~channel"] + "<br>"
+            var referring_link = "<b>~referring_link:</b>" + data_parsed["~referring_link"] + "<br>"
+            var clicked_branch_link = "<b>clicked_branch_link:</b>" + data_parsed["+clicked_branch_link"] + "<br>"
+            branch_sub.innerHTML = campaign + channel + referring_link + clicked_branch_link
         });
     </script>
 
