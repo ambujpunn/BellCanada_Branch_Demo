@@ -19,7 +19,8 @@
             var branch_main = document.getElementById("branch-demo-main")
             branch_main.innerHTML = "QR Code Link Data"
             var branch_sub = document.getElementById("branch-demo-sub")
-            var text = "~campaign: " + data["~campaign"]
+            var data_parsed = data["data_parsed"]
+            var text = "~campaign: " + data_parsed["~campaign"]
             branch_sub.innerHTML = text
         });
     </script>
