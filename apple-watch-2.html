@@ -3,6 +3,35 @@
 <html id="shop" lang="en" xmlns:fb="http://ogp.me/ns/fb#" data-di-loaded="1"><head class="at-element-marker"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Apple Watch Series 8 - Aluminum | Bell Mobility</title>
 
+    <h1>
+      Opened by Branch QR Code
+  </h1>
+
+  <script>
+      // load Branch
+      (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking qrCode".split(" "), 0);
+      // init Branch
+      branch.init('key_live_kkGffiMKsmMX4B5umosCzlkduueBt6qZ', function(err, data) {
+      //branch.init('key_live_hsnhjnBuJmhEAmVjdBcYxafixvluV0vL', function(err, data) {
+          console.log("DEBUGGING WITH PROD INFO HERE!!!")
+          console.log(err, data);
+
+          var branch_main = document.getElementById("branch-demo-main")
+          branch_main.innerHTML = "QR Code Link Data"
+          var branch_sub = document.getElementById("branch-demo-sub")
+          var data_parsed = data["data_parsed"]
+          var campaign = "<p><b>~campaign:</b> " + data_parsed["~campaign"] + "</p>"
+          var channel = "<p><b>~channel:</b> " + data_parsed["~channel"] + "</p>"
+          var referring_link = "<p><b>~referring_link:</b> " + data_parsed["~referring_link"] + "</p>"
+          var clicked_branch_link = "<p><b>clicked_branch_link:</b> " + data_parsed["+clicked_branch_link"] + "</p>"
+          var custom_data = "<p><b>Custom Data</b></p>"
+          var product_name = "<p><b>product_name:</b> " + data_parsed["product_name"] + "</p>"
+          var product_pricing = "<p><b>product_pricing:</b> " + "monthly: " + data_parsed["product_pricing"]["monthly"] +", down: " + 
+              data_parsed["product_pricing"]["down"] + ", full-price: " + data_parsed["product_pricing"]["full-price"] + "</p>"
+          branch_sub.innerHTML = campaign + channel + referring_link + clicked_branch_link + custom_data + product_name + product_pricing
+      });
+  </script>
+
     <link rel="preload" as="font" type="font/woff2" href="https://www.bell.ca/Styles/media/core/fonts/bellslim_medium-webfont.woff2" crossorigin="">
 <link rel="preload" as="font" type="font/woff2" href="https://www.bell.ca/Styles/media/core/fonts/bellslim_regular-webfont.woff2" crossorigin="">
 <link rel="preload" as="font" type="font/woff2" href="https://www.bell.ca/Styles/media/core/fonts/bellslim_semibold-webfont.woff2" crossorigin="">
@@ -664,14 +693,12 @@ $0.00down                                        </div>
                                 </div>
 
                                 <div class="dd-promo-title w-100">
-                                    <div class="dd-promo-title-title">
-                                        NOW SAVE
-                                        $120.00*
+                                    <div id="branch-demo-main" class="dd-promo-title-title">
 
                                     </div>
                                     <div class="dd-promo-title-body w-100 row margin-l-0">
-                                        <div class="d-inline col-md-11">
-                                            Over 24 months on SmartPay vs. our device full price
+                                        <div id="branch-demo-sub" class="d-inline col-md-11">
+                                          
                                         </div>
                                     </div>
                                 </div>
