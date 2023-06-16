@@ -26,8 +26,8 @@
           var clicked_branch_link = "<p><b>clicked_branch_link:</b> " + data_parsed["+clicked_branch_link"] + "</p>"
           var custom_data = "<p><b>Custom Data</b></p>"
           var product_name = "<p><b>product_name:</b> " + data_parsed["product_name"] + "</p>"
-          var product_pricing = "<p><b>product_pricing:</b> " + "monthly: " + data_parsed["product_pricing"]["monthly"] +", down: " + 
-              data_parsed["product_pricing"]["down"] + ", full-price: " + data_parsed["product_pricing"]["full-price"] + "</p>"
+          var product_pricing = "<p><b>product_pricing:</b> " + "monthly: $" + data_parsed["product_pricing"]["monthly"] +", down: $" + 
+              data_parsed["product_pricing"]["down"] + ", full-price: $" + data_parsed["product_pricing"]["full-price"] + "</p>"
           branch_sub.innerHTML = campaign + channel + referring_link + clicked_branch_link + custom_data + product_name + product_pricing
       });
   </script>
@@ -698,7 +698,7 @@ $0.00down                                        </div>
                                     </div>
                                     <div class="dd-promo-title-body w-100 row margin-l-0">
                                         <div id="branch-demo-sub" class="d-inline col-md-11">
-                                          
+
                                         </div>
                                     </div>
                                 </div>
